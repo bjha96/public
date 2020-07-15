@@ -1,5 +1,6 @@
 #! /bin/bash
-# Uses youtube-dl and ffmpeg to download audio from youtube
+# Uses youtube-dl and ffmpeg to download audio from youtube.
+# AtompicParsley can be used to embed album art into the music file.
 # Create  file called urls.txt in the same directory as this script
 # Add list of URLs (one on each line) you want to download
 # Run the script as ./download.sh
