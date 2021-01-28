@@ -1,31 +1,20 @@
-import java.util.Scanner;
+import jsoncmp.JsonComparer;
 
-//https://stackoverflow.com/questions/58191577/i-tried-a-lot-of-different-things-in-order-for-the-program-to-work-i-am-trying
 public class Main {
 
 	public static void main(String[] args) {
 
-		try (Scanner keyboard = new Scanner(System.in)) {
-
-			System.out.println("First int (length): ");
-			int L = keyboard.nextInt();
-
-			System.out.println("Second Int (height): ");
-			int H = keyboard.nextInt();
-
-			if ((L > 0 && H > 0) && (L < 21 && H < 21)) {
-
-				for (int j = 0; j < H; j++) {
-					for (int i = 0; i < L; i++) {
-						System.out.print("*");
-					}
-					System.out.println();
-				}
-
-				return;
-			}			
-		}
+		//SOTest1 test1 = new SOTest1();
+		//test1.run();
+		//SquareCircle sc = new SquareCircle();
+		//sc.layout(32);
+		String baselineFile = "/home/bjha/eclipse-workspace/github/public/chrome_mandatory_policy.json";
+		String givenFile = "/home/bjha/eclipse-workspace/github/public/chrome_mandatory_policy2.json";
 		
-		System.out.println("Bad input. Please enter values between [1-21].");
+		JsonComparer cmp = new JsonComparer( JsonComparer.readTextFile(baselineFile) );
+		
+		cmp.compare(JsonComparer.readTextFile(givenFile));
+		
+		System.out.println(cmp.getViolations());
 	}
 }
