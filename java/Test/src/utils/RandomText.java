@@ -57,7 +57,7 @@ public final class RandomText {
 		sb.insert(rand.nextInt(sb.length()), sp);
 		
 		//Insert a random integer [0-9] somewhere.
-		int nn = rand.nextInt(9);
+		int nn = rand.nextInt(10);
 		sb.insert(rand.nextInt(sb.length()), nn);
 
 		return sb.toString();
