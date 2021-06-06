@@ -7,9 +7,9 @@ echo "***************STARTING**************"
 
 date
 
-SRC_DIR="${HOME}/"
-DEST_HOST=192.169.0.5
+DEST_HOST=192.168.0.5
 DEST_SHARE=NetBackup
+
 SRC_DIR="${HOME}/"
 RSYNC_USER=${USER}
 
