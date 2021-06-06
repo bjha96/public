@@ -1,4 +1,6 @@
 ## Rsync Filter for $HOME
+# Based on: https://gist.github.com/DarwinAwardWinner/948032
+
 # Saved credentials
 + /.ssh/*
 + /[Cc]redentials/*
