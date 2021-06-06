@@ -1,0 +1,100 @@
+## Rsync Filter for $HOME
+# Saved credentials
++ /.ssh/*
++ /[Cc]redentials/*
+
+# Universal excludes -- These apply to all subdirs
+- [Cc]ache
+- temp
+- tmp
+- octave-core
+
+# Emacs temp files
+- .#*
+
+# Exclude certain directories
+- /.kismet/*
+- /.psensor/*
+- /.gnutls/*
+- /.gconf/*
+- /.config/*
+- /.cache/*
+- /.com.*/*
+- /.gnome/*
+- /.local/*
+- /.pki/*
+- /.thumbnails/*
+- /.vmware/*
+- /.dbus/*
+- /.gnupg/*
+- /.mozilla/*
+- /.zoom/*
+- /.whatsdesk/*
+- /temp/*
+- /.gphoto/*
+- /.thnuclnt/*
+- /.eclipse/*
+- /snap/*
+- /eclipse-workspace/*
+- /.gimp*
+- /.swt/*
+- /.vim/*
+- /[Aa]ndroid/*
+- /.[Aa]ndroid/*
+- /.m2/*
+- /.tooling/*
+- /.AndroidStudio*
+- /.java/*
+- /.clamtk/*
+- /.p2/*
+- /.gradle/*
+- /work/*
+
+# Anything in Downloads can be downloaded again, so don't save it
+- /Downloads
+- /Dropbox
+- /[Oo]ne[Dd]rive
+- /[Gg]oogle[Dd]rive
+
+# These are too big to include
+- /Music
+- /Videos
+- /Pictures
+- /bioinformatics
+
+# These are transient
+- /temp
+- /.local
+- /.cache
+
+
+# Misc files/dirs to exclude
+- /.abbrev_defs
+- /.adobe
+- /.aspell.en.
+- /.bogofilter
+- /.bzr.log
+- /.compiz/session
+- /.cpanplus
+- /.dbus
+- /.dc_history
+- /.dropbox
+- /.dropbox-dist
+- /.dvdcss
+- /.esd_auth
+- /.fontconfig
+- /.freemind/*.mm
+- /.gimp-2.6/tmp
+- /.gimp-2.6/swap
+- /.gksu.lock
+- /.googleearth/Cache
+- /.googleearth/Temp
+- /.gvfs
+- /.macromedia
+- /.marble/data
+- /.Trash
+- /.usbcreator.log
+- /.xsession-errors*
+- .bash*
+- .mysql*
+- .viminfo
