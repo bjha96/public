@@ -1,0 +1,46 @@
+Exclude a bunch of files and directories while creating a tar of user <xxx> home directory.
+
+$sudo tar -X "/home/<xxx>/tar.exclude" --exclude-caches-all --exclude-backups --exclude-vcs -C <xxx> -cvzf <xxx_home>.tgz .
+
+#Contents of exclude.tar file
+*.exe
+*.rpm
+*.msi
+.AndroidStudio3.3
+.android
+.azure
+.cache
+.clamtk
+.config
+.dbus
+.eclipse
+.gconf
+.gimp-2.8
+.gnome
+.gnupg
+google-chrome
+.gnutls
+.gphoto
+.gradle
+.java
+.kismet
+.local
+.m2
+.mozilla
+.p2
+.pki
+.psensor
+.ssh
+.swt
+.thnuclnt
+.thumbnails                                                                                                                    
+.tooling
+.vim
+.vmware
+.vscode
+.wine
+.zoom
+Android
+snap                                                                                                                        
+temp
+.metadata
