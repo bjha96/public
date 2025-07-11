@@ -6,10 +6,12 @@
 # Run the script as ./download.sh
 
 DL_URL=${1}
+DEST_DIR=./Downloads
 
-#Download cmd
+#Download cmd, modify paths here
 #CMD="youtube-dl -f bestaudio[ext=m4a] --embed-thumbnail --add-metadata"
-CMD="youtube-dl -f bestaudio[ext=m4a]"
+#CMD="youtube-dl -f bestaudio[ext=m4a]"
+CMD="./yt-dlp -f bestaudio[ext=m4a] -o ${DEST_DIR}/%(title)s-%(id)s.%(ext)s"
 
 if [ "a${DL_URL}" == "a"  ]; then
 	DL_URL="urls.txt"
