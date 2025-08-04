@@ -1,8 +1,7 @@
 #!/bin/bash
 
-#Recursively scan the given folder and dump printable strings
-#in the files found. THe archives are expanded and recursively
-#scanned. 
+#Recursively scan the given folder, file or an archive, and dump printable strings
+#in the files found in them. The archives are expanded and recursively scanned. 
 
 # Known archive types
 ARCHIVE_EXTENSIONS=("zip" "jar" "tar" "tar.gz" "tgz" "gz" "bz2" "xz")
