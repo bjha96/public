@@ -44,7 +44,7 @@ if [[ "$tupCount" == "2" ]]; then
    len1=${#col1[@]}
    len2=${#col2[@]}
    
-   if [[ "$len1" == "0" || "$len2" == "0" || "$len1" != "$len2" ]]; then
+   if [[ "$len2" == "0" || "$len1" != "$len2" ]]; then
        echo "Bad CSV input!"
        exit 3
    fi 
@@ -76,7 +76,7 @@ elif [[ "$tupCount" == "3" ]]; then
    len2=${#col2[@]}
    len3=${#col3[@]}
    
-   if [[ "$len1" == "0" || "$len2" == "0" || "$len3" == "0" || "$len1" != "$len2" || "$len1" != "$len3" ]]; then
+   if [[ "$len3" == "0" || "$len1" != "$len2" || "$len1" != "$len3" ]]; then
        echo "Bad CSV input!"
        exit 3
    fi 
