@@ -30,7 +30,7 @@ cleanup(){
     rm -rf "$TMP_DIR"
 }
 
-#Clean empty lines and header row, if any, in the source CSV
+#Remove empty lines and header row, if any, in the source CSV
 if [[ "$HAS_HEADER_ROW" == "1" ]]; then
     tail -n +2 "${CSV_FILE}" > "$TMP_DIR/input.csv"
     CSV_FILE="$TMP_DIR/input.csv"
