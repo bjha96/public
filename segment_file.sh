@@ -10,7 +10,7 @@ set -aeo pipefail
 #set -x
 
 #bytes
-DEFAULT_SEGMENT_SIZE=8192
+DEFAULT_SEGMENT_SIZE=4096 #4k
 
 TMPROOT="$(mktemp -dq)"
 trap 'rm -rf "$TMPROOT"' EXIT
@@ -58,7 +58,7 @@ segment_file(){
         echo "..." >> "$tmpf"
         
         #mid part
-        local mid_offset=$((filesz - mid/2))
+        local mid_offset=$((filesz/2 - mid/2))
         read_bytes "$input" $mid_offset  $mid >> "$tmpf"
         echo "..." >> "$tmpf"
         echo "..." >> "$tmpf"
